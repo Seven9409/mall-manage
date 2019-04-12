@@ -1,8 +1,27 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import VueRouter from 'vue-router'
+// 引入公共css
+import routes from './routes'
+import VueResource from 'vue-resource'
+
+Vue.use(VueResource);
+Vue.use(VueRouter);
+Vue.use(ElementUI);
+Vue.config.productionTip = false;
+
+
+const router = new VueRouter({
+    routes
+});
+router.push("/homePage/splitCommodity");
+
+Vue.config.productionTip = false;
 
 new Vue({
+    router,
   render: h => h(App),
 }).$mount('#app')
