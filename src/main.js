@@ -4,13 +4,14 @@ import App from './App.vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueRouter from 'vue-router'
-// 引入公共css
 import routes from './routes'
 import VueResource from 'vue-resource'
+import echarts from 'echarts';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(ElementUI);
+Vue.use(echarts);
 Vue.config.productionTip = false;
 
 
